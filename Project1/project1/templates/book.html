@@ -1,0 +1,58 @@
+{%extends "layout.html"%}
+
+{%block title%}
+	Book Details!
+{%endblock%}
+
+{%block style%}
+	nav{
+		margin-top: 30px;
+		margin-bottom:30px;
+	}
+{%endblock%}
+
+{% block body %}
+	<nav class=class="navbar navbar-expand-md navbar-light bg-light">
+		<ul class="nav nav-tabs justify-content-end">
+			<li class="nav-item">
+				<a class="nav-link active" href="{{url_for('search')}}">Home</a>
+			</li>
+			<li class="nav-item"> 
+				<a class="nav-link" href="{{url_for('signout')}}">Logout</a>
+			</li>
+		</ul>
+	</nav>
+	<h1> Book's details: </h1>
+	<ul>
+		<li> <strong>Name: </strong>{{book.title}}</li>
+		<li> <strong>Author: </strong>{{book.author}}</li>
+		<li> <strong>ISBN: </strong>{{book.isbn}} </li>
+		<li> <strong>Publication year: </strong>{{book.year}}</li>
+		{% if goodread_review %}
+		<li> <strong>Average rating on Goodread: </strong>{{ average_rating }}</li>
+		<li> <strong>Number of ratings on Goodread: </strong>{{ work_ratings_count }}</li>
+		{% endif %}
+		<li> <strong>Your rating: </strong>{{review.user_rating}}</li>
+		<li> <strong>Your opinion: </strong>{{review.user_opinion}}</li>
+	</ul>
+	{% if condition %}
+	<form action="{{url_for('book', book_isbn=book.isbn)}}" method="POST">
+		<div class="form-group">
+			<label> <strong>Your rating about this book</strong></label>
+			<select class="form-control" name="rating">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</div>
+		<div class="form-group" name="opinion">
+			<label> <strong>Your opinion about this book.</strong></label>
+			<textarea name="opinion" class="form-control" placeholder="Max 250 characters." rows="5" cols="50" maxlength="250">
+			</textarea>
+		</div>
+		<button class="btn btn-primary"> Submit </button>
+	</form>
+	{%endif%}
+{% endblock %}
