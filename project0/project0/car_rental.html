@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Car Rental</title>
+		<link rel="stylesheet" href="car_rental.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	</head>
+	<body>	
+		<div class="header">
+			<h1>Patel Travel Agency</h1>		
+			</div>
+			<div class="button1">
+			<a class="btn btn-primary" href="index.html" role="button">Home</a>
+			<a class="btn btn-primary" href="sign_in.html" role="button">Sign In</a>
+			<a class="btn btn-primary" href="sign_up.html" role="button">Sign Up</a>
+			<a class="btn btn-primary" href="hotel.html" role="button">Hotel</a>
+			<a class="btn btn-primary" href="car_rental.html" role="button">Car Rental</a>			
+		    </div> 
+			
+		<div class="container1"> 
+			<h2>Search for car rental</h2>
+		<form class="form1">
+		<div class="form-group">
+			<label>Pick Up</label>
+			<input type="datalist" id="list"class="form-control" placeholder="Enter pick up location" list="country" name="country">
+			<div class="datalist-holder">
+			<datalist id="country">
+				<option value="New York, USA" />
+				<option value="Las Vegas, USA" />
+				<option value="Sydney, Australia" />
+				<option value="Melbourne, Australia" />
+				<option value="Mumbai, India" />
+				<option value="Delhi, India" />
+				<option value="Tokyo, Japan" />
+				<option value="Kyoto, Japan" />
+				<option value="Moscow, Russia" />
+				<option value="Sochi, Russia" />
+				<option value="Zurich, Switzerland" />
+				<option value="Geneva, Switzerland" />
+				<option value="Bangkok, Thailand" />
+				<option value="Pattaya, Thailand" />
+				<option value="Dubai, United Arab Emirates" />
+				<option value="Abu Dhabi, United Arab Emirates" />
+				<option value="Hue, Vietnam" />	
+				<option value="Dalat, Vietnam" />
+			</datalist>
+		</div>
+		</div>
+		<div class="form-group">
+			<label>Drop Off</label>
+			<input type="datalist" id="list"class="form-control" placeholder="Enter drop off location" list="country" name="country">
+			<div class="datalist-holder">
+			<datalist id="country">
+				<option value="New York, USA" />
+				<option value="Las Vegas, USA" />
+				<option value="Sydney, Australia" />
+				<option value="Melbourne, Australia" />
+				<option value="Mumbai, India" />
+				<option value="Delhi, India" />
+				<option value="Tokyo, Japan" />
+				<option value="Kyoto, Japan" />
+				<option value="Moscow, Russia" />
+				<option value="Sochi, Russia" />
+				<option value="Zurich, Switzerland" />
+				<option value="Geneva, Switzerland" />
+				<option value="Bangkok, Thailand" />
+				<option value="Pattaya, Thailand" />
+				<option value="Dubai, United Arab Emirates" />
+				<option value="Abu Dhabi, United Arab Emirates" />
+				<option value="Hue, Vietnam" />	
+				<option value="Dalat, Vietnam" />	
+			</datalist>
+		</div>
+		</div>
+		<div class="form-group">
+			<label>Pick Up Date</label>
+			<input type="date" class="form-control" placeholder="Enter pick up Date">
+		</div>
+		<div class="form-group">
+			<label>Drop Off Date</label>
+			<input type="date" class="form-control" placeholder="Enter drop off Date">
+		</div>
+		<div class="form-group">
+			<label>Pick Up Time</label>
+			<input type="time" class="form-control" placeholder="Enter pick up Time">
+		</div>
+		<div class="form-group">
+			<label>Drop Off Time</label>
+			<input type="time" class="form-control" placeholder="Enter drop off Time">
+		</div>
+		<div id="submit">
+			<a href="index.html"> Submit </a>
+		</div>	
+		</form> 
+		</div>
+	</body>
+</html>
